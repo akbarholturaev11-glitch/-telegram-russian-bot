@@ -249,6 +249,14 @@ async def handle_image_message(message: Message, session):
     user = await user_repo.get_by_telegram_id(message.from_user.id)
     user_lang = user.language if user and user.language else "ru"
 
+    if user.payment_status != "paid":
+        await message.answer(
+            build_subscription_main_text_for_user(user, user_lang),
+            reply_markup=subscription_main_keyboard(user_lang),
+            disable_web_page_preview=True,
+        )
+        return
+
     can_use, message_key = await access_service.can_use_image_ai(message.from_user.id)
     if not can_use:
         if message_key == "access_daily_image_limit_reached":
