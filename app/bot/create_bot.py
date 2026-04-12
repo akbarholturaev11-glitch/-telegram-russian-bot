@@ -1,5 +1,8 @@
+from app.db.session import async_session_maker
+from app.bot.middlewares.db import DBSessionMiddleware
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
+from aiogram.enums import ParseMode
 
 from app.bot.handlers.start import router as start_router
 from app.bot.handlers.commands import router as commands_router
@@ -13,8 +16,14 @@ from app.bot.handlers.course import router as course_router
 
 
 def create_bot(settings):
-    bot = Bot(token=settings.BOT_TOKEN)
+    bot = Bot(
+        token=settings.BOT_TOKEN,
+        parse_mode=ParseMode.HTML
+    )
     dp = Dispatcher(storage=MemoryStorage())
+
+    dp.message.middleware(DBSessionMiddleware(async_session_maker))
+    dp.callback_query.middleware(DBSessionMiddleware(async_session_maker))
 
     dp.include_router(start_router)
     dp.include_router(commands_router)
