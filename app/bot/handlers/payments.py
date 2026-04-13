@@ -31,9 +31,9 @@ async def payment_screenshot_handler(message: Message, session):
         if latest_pending:
             plan_type = latest_pending.plan_type
 
-    # Agar bu checkout/payment holati bo'lmasa, image handlerga o'tkazamiz
     if not plan_type:
-        raise SkipHandler()
+        await message.answer(t("payment_plan_not_selected", lang))
+        return
 
     payment, status_or_error = await payment_service.attach_or_create_payment_screenshot(
         telegram_id=message.from_user.id,

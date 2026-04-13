@@ -235,7 +235,7 @@ async def subscription_plan_handler(callback: CallbackQuery, session):
     plan_type = callback.data.split(":")[2]
 
     await user_repo.set_selected_plan_type(user, plan_type)
-    await session.flush()
+    await session.commit()
 
     checkout_info, error_key = await payment_service.get_checkout_info(
         telegram_id=callback.from_user.id,
