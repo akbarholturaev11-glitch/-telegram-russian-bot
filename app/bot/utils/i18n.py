@@ -190,7 +190,7 @@ TEXTS = {
 
         "referral_daily_limit_offer": "Bugungi limitingiz tugadi. Do‘stingizni taklif qiling va +5 bonus savol oling. Yoki obuna oling.",
 
-        "access_daily_image_limit_reached": "<b>📸 Rasm limiti tugadi</b>\n\n<blockquote>Bugungi rasm limiti tugadi.\nObuna oling va botdan hech qanday cheklovsiz foydalaning.</blockquote>",",
+        "access_daily_image_limit_reached": "<b>📸 Rasm limiti tugadi</b>\n\n<blockquote>Bugungi rasm limiti tugadi.\nObuna oling va botdan hech qanday cheklovsiz foydalaning.</blockquote>",
         "referral_invite_button": "👥 Do‘st chaqirish",
         "referral_bonus_received": "Taklifingiz qabul qilindi ✅\nSizga +5 bonus savol berildi. Endi botdan yana foydalanishingiz mumkin.",
 
