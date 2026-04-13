@@ -1,27 +1,24 @@
 import asyncio
-from app.db.session import SessionLocal
 from sqlalchemy import text
+from app.db.session import async_session_maker
+
+TABLES = [
+    "course_attempts",
+    "course_progress",
+    "referrals",
+    "messages",
+    "payments",
+    "users"
+]
 
 async def clean():
-    async with SessionLocal() as session:
-
-        tables = [
-            "course_attempts",
-            "course_progress",
-            "referrals",
-            "messages",
-            "payments",
-            "users"
-        ]
-
-        for table in tables:
-            try:
-                await session.execute(text(f"DELETE FROM {table}"))
-                print(f"cleared: {table}")
-            except Exception as e:
-                print(f"skip: {table} ({e})")
+    async with async_session_maker() as session:
+        for table in TABLES:
+            await session.execute(text(f"DELETE FROM {table}"))
+            print(f"cleared: {table}")
 
         await session.commit()
         print("🔥 FULL CLEAN DONE")
 
-asyncio.run(clean())
+if __name__ == "__main__":
+    asyncio.run(clean())

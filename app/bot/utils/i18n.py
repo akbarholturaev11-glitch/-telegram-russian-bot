@@ -23,7 +23,7 @@ TEXTS = {
 
         "referral_daily_limit_offer": "Лимити имрӯзаи шумо ба анҷом расид. Дӯсти худро даъват кунед ва +5 саволи бонусӣ гиред. Ё метавонед обуна гиред.",
 
-        "access_daily_image_limit_reached": "Лимити сурати имрӯзаи шумо ба анҷом расид. Фардо боз кушода мешавад. Ё метавонед обуна гиред.",
+        "access_daily_image_limit_reached": "<b>📸 Лимити сурат ба анҷом расид</b>\n\n<blockquote>Лимити сурати имрӯзаи шумо ба анҷом расид.\nОбуна гиред ва ботро бе ягон маҳдудият истифода баред.</blockquote>"",
         "referral_invite_button": "👥 Дӯст даъват кардан",
         "referral_bonus_received": "Таклифи шумо қабул шуд ✅\nБа шумо +5 саволи бонусӣ дода шуд. Акнун метавонед боз аз бот истифода баред.",
         
@@ -107,7 +107,7 @@ TEXTS = {
 
         "referral_daily_limit_offer": "Ваш лимит на сегодня закончился. Пригласите друга и получите +5 бонусных вопросов. Или вы можете оформить подписку.",
 
-        "access_daily_image_limit_reached": "Ваш лимит на изображения на сегодня закончился. Завтра он снова откроется. Или вы можете оформить подписку.",
+        "access_daily_image_limit_reached": "<b>📸 Лимит изображений исчерпан</b>\n\n<blockquote>Ваш лимит на изображения на сегодня закончился.\nОформите подписку и пользуйтесь ботом без ограничений.</blockquote>",
         "referral_invite_button": "👥 Пригласить друга",
         "referral_bonus_received": "Ваше приглашение принято ✅\nВам начислено +5 бонусных вопросов. Теперь вы снова можете пользоваться ботом.",
         "subscription_expires_tomorrow": "Завтра день окончания вашей подписки.",
@@ -190,7 +190,7 @@ TEXTS = {
 
         "referral_daily_limit_offer": "Bugungi limitingiz tugadi. Do‘stingizni taklif qiling va +5 bonus savol oling. Yoki obuna oling.",
 
-        "access_daily_image_limit_reached": "Лимити сурати имрӯзаи шумо ба анҷом расид. Фардо боз кушода мешавад. Ё метавонед обуна гиред.",
+        "access_daily_image_limit_reached": "<b>📸 Rasm limiti tugadi</b>\n\n<blockquote>Bugungi rasm limiti tugadi.\nObuna oling va botdan hech qanday cheklovsiz foydalaning.</blockquote>",",
         "referral_invite_button": "👥 Do‘st chaqirish",
         "referral_bonus_received": "Taklifingiz qabul qilindi ✅\nSizga +5 bonus savol berildi. Endi botdan yana foydalanishingiz mumkin.",
 

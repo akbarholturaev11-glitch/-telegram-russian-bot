@@ -103,7 +103,7 @@ class AccessService:
                 user_id=user.id,
                 content_type="image",
             )
-            if today_image_count >= 1:
+            if today_image_count >= 2:
                 return False, "access_daily_image_limit_reached"
 
             return True, ""
