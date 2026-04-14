@@ -2,6 +2,7 @@ from aiogram import Router, F
 from aiogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.types import FSInputFile
 from app.repositories.user_repo import UserRepository as UserRepo
+from app.bot.keyboards.subscription import subscription_plan_keyboard
 
 from app.config import settings
 from app.repositories.user_repo import UserRepository
