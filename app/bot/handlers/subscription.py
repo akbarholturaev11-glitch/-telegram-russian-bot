@@ -307,11 +307,23 @@ async def subscription_plan_handler(callback: CallbackQuery, session):
 
     await callback.answer()
 
-    await callback.message.edit_text(
-        checkout_info["text"],
-        reply_markup=checkout_info["keyboard"],
-        disable_web_page_preview=True,
-    )
+    if "photo" in checkout_info:
+        await callback.message.delete()
+
+        await callback.message.answer_photo(
+            photo=checkout_info["photo"],
+            caption=checkout_info["caption"],
+            reply_markup=checkout_info.get("keyboard")
+        )
+    else:
+        await callback.message.edit_text(
+            checkout_info["caption"],
+            reply_markup=checkout_info.get("keyboard"),
+            disable_web_page_preview=True,
+        )
+
+    await callback.answer()
+
 @router.callback_query(F.data == "subscription:back")
 async def subscription_back_handler(callback: CallbackQuery, session):
 
